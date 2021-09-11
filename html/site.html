@@ -33,22 +33,22 @@
             <div class="cabecalho-b2">
                 <div class="perfil"> 
                     <div class="notificacao">3</div>
-                    <img src="./assets/images/perfil.png" alt=""> </div>
+                    <img src="./assets/perfil.jpg" alt=""> </div>
                 <div class="nome">Olá, <b>Letícia Rodrigues</b></div>
 
                 <div class="bolinhas">
                     <div class="box-carregar">
-                        <div class="carregar"> <img src="./assets/images/carregar.png" alt=""> </div>
+                        <div class="carregar"> <img src="./assets/carregar.png" alt=""> </div>
                     </div>
                     <div class="box-sair">
-                        <div class="sair"> <img src="./assets/images/logout.png" alt=""> </div>
+                        <div class="sair"> <img src="./assets/logout.svg" alt=""> </div>
                     </div>
                 </div>
             </div>
 
             <div class="box-produto">
                 <div class="box-novo-produto">
-                    <div class="linha2"> <img src="./assets/images/linha1.png" alt=""> </div>
+                    <div class="linha"> <img src="./assets/linha-azul.png" alt=""> </div>
                     <div class="novo-produto">Novo Produto</div>
                 </div>
 
@@ -89,94 +89,109 @@
                             </div>
                         </div>
 
-                        <div class="link">
+                        <div class="input-link">
                             <div class="label">Link Imagem: </div>
-                            inp55
+                            <input type="url" id="link">
                         </div>
 
-                        <div class="botao-cadastrar"> <button>Cadastrar</button> </div>
+                        <div class="input4">
+                            <div class="textarea">
+                                <div class="label">Descrição: </div>
+                                <textarea name="descricao" id="descricao" style="resize: none;"></textarea>
+                            </div>
+
+                            <div class="botao-cadastrar"> <button>Cadastrar</button> </div>
+                        </div>
                     </div>
+            </div>
 
 
-            <div class="box-matriculados">
-                <div class="matriculados">
-                    <div class="linha3"> <img src="./assets/images/linha1.png" alt=""> </div>
-                    <div class="alu-matricula">Alunos Matriculados</div>
+            <div class="box-cadastrados">
+                <div class="cadastrados">
+                    <div class="linha2"> <img src="./assets/linha-azul.png" alt=""> </div>
+                    <div class="produto-cadastrado">Produtos Cadastrados</div>
                 </div>
 
-                    <table class="tabela-matriculas">
+                    <table class="tabela-cadastros">
 
                         <thead>
                             <tr class="cabecalho-table">
+                                <th></th>
                                 <th>ID</th>
-                                <th>Nome</th>
-                                <th>Chamada</th> 
-                                <th>Turma</th>
-                                <th>Curso</th>
+                                <th>Produto</th>
+                                <th>Categoria</th> 
+                                <th>Preço</th>
+                                <th>Estoque</th>
                                 <th></th>
                             </tr>
                         </thead>
                         <tr>
+                            <td> <img src="./assets/esfera.png" alt=""> </td>
                             <td>1</td>
-                            <td>Fulao da Silva Sauro</td>
+                            <td>Esfera do Dragão</td>
+                            <td>Acessórios</td>
+                            <td>15,56</td>
                             <td>14</td>
-                            <td>InfoX</td>
-                            <td>Informática</td>
 
                             <td><div class="icons">
                                 <div class="editar">
-                                    <div class="icon-editar"> <img src="./assets/images/edit.png" alt=""> </div>
+                                    <div class="icon-editar"> <button><img src="./assets/editar.png" alt=""> </button></div>
                                 </div>
         
                                 <div class="deletar">
-                                    <div class="icon-deletar"> <img src="./assets/images/delete.png" alt=""> </div>
+                                    <div class="icon-deletar"> <button> <img src="./assets/apagar.png" alt=""> </button> </div>
                                 </div>
                             </div>
                             </td>
                         </tr>
 
                         <tr>
-                            <td>2</td>
-                            <td>Fulao da Silva Sauro</td>
-                            <td>15</td>
-                            <td>InfoX</td>
-                            <td>Informática</td>
+                            <td> <img src="./assets/esfera.png" alt=""> </td>
+                            <td>1</td>
+                            <td>Esfera do Dragão</td>
+                            <td>Acessórios</td>
+                            <td>15,56</td>
+                            <td>14</td>
                             <td></td>
                         </tr>
 
                         <tr>
-                            <td>3</td>
-                            <td>Fulao da Silva Sauro</td>
-                            <td>16</td>
-                            <td>InfoX</td>
-                            <td>Informática</td>
+                            <td> <img src="./assets/esfera.png" alt=""> </td>
+                            <td>1</td>
+                            <td>Esfera do Dragão</td>
+                            <td>Acessórios</td>
+                            <td>15,56</td>
+                            <td>14</td>
                             <td></td>
                         </tr>
 
                         <tr>
-                            <td>4</td>
-                            <td>Fulao da Silva Sauro</td>
-                            <td>17</td>
-                            <td>InfoX</td>
-                            <td>Informática</td>
+                            <td> <img src="./assets/esfera.png" alt=""> </td>
+                            <td>1</td>
+                            <td>Esfera do Dragão</td>
+                            <td>Acessórios</td>
+                            <td>15,56</td>
+                            <td>14</td>
                             <td></td>
                         </tr>
 
                         <tr>
-                            <td>5</td>
-                            <td>Fulao da Silva Sauro</td>
-                            <td>18</td>
-                            <td>InfoX</td>
-                            <td>Informática</td>
+                            <td> <img src="./assets/esfera.png" alt=""> </td>
+                            <td>1</td>
+                            <td>Esfera do Dragão</td>
+                            <td>Acessórios</td>
+                            <td>15,56</td>
+                            <td>14</td>
                             <td></td>
                         </tr>
 
                         <tr>
-                            <td>6</td>
-                            <td>Fulao da Silva Sauro</td>
-                            <td>19</td>
-                            <td>InfoX</td>
-                            <td>Informática</td>
+                            <td> <img src="./assets/esfera.png" alt=""> </td>
+                            <td>1</td>
+                            <td>Esfera do Dragão</td>
+                            <td>Acessórios</td>
+                            <td>15,56</td>
+                            <td>14</td>
                             <td></td>
                         </tr>
                     </table>
