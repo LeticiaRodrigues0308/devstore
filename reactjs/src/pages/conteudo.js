@@ -3,7 +3,15 @@ import { ConteudoSite } from "./conteudo.styled";
 import { ProdutosInput } from "../components/outros/inputs";
 import { TabelaProdutos, IconesTabela } from "../components/outros/table";
 
-import { useState, useEffect } from "react";
+import LoadingBar from 'react-top-loading-bar';
+
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
+import {confirmAlert} from 'react-confirm-alert';
+import 'react-confirm-alert/src/react-confirm-alert.css';
+
+import { useState, useEffect, useRef } from "react";
 
 import Api from "../service/api"
 const api = new Api();
@@ -21,28 +29,35 @@ export default function Conteudo() {
     const [descricao, setDescricao] = useState('');
     const [idAlterando, setIdAlterando] = useState(0);
 
+   const loading = useRef(null)
+
     async function listarProdutos() {
+        loading.current.complete();
+
         let r = await api.listarProdutos();
         console.log(r)
         setProdutos(r)
     }
 
     async function inserirProduto() {
+        loading.current.complete();
+
+
         if(idAlterando == 0) {
             let r = await api.inserirProduto(nome, categoria, precode, precopor, avaliacao, descricao, estoque, imagem);
 
             if(r.erro){
-                alert(r.erro);
+                toast.error(r.erro);
             } else {
-                alert('Produto inserido com sucesso!');
+                toast.success('Produto inserido com sucesso!');
             }
         } else {
             let r = await api.alterarProduto(idAlterando, nome, categoria, precode, precopor, avaliacao, descricao, estoque, imagem);
 
             if(r.erro){
-                alert(r.erro);
+                toast.error(r.erro);
             } else {
-                alert('Produto alterado com sucesso!');
+                toast.success('Produto alterado com sucesso!');
             }
         }
 
@@ -63,6 +78,8 @@ export default function Conteudo() {
     }
 
     async function alterarProduto(item) {
+        loading.current.complete();
+
         setNome(item.nm_produto);
         setCategoria(item.ds_categoria);
         setPrecode(item.vl_preco_de);
@@ -75,10 +92,29 @@ export default function Conteudo() {
     }
 
     async function removerProduto(id) {
-        let r = await api.removerProduto(id);
-        alert('Produto removido com sucesso!');
+        loading.current.complete();
 
-        listarProdutos();
+        confirmAlert({
+            title: 'Remover Produto',
+            message: `Tem certeza que deseja remover o produto ${id} ?`, 
+            buttons: [
+                {
+                    label: 'Sim',
+                    onClick: async () => {
+                        let r = await api.removerProduto(id);
+                        if(r.erro)
+                            toast.error(`${r.erro}`);
+                        else {
+                            toast.success('🗑️ Produto removido com sucesso!');
+                            listarProdutos();
+                        }
+                    }
+                },
+                {
+                    label: 'Não'
+                }
+            ]
+        });
     }
 
     useEffect(() => {
@@ -87,6 +123,8 @@ export default function Conteudo() {
 
     return (
         <ConteudoSite>
+            <ToastContainer/>
+            <LoadingBar  color='#13D3D3' ref={loading}/>
             <div className="container">
 
             <div class="box1">

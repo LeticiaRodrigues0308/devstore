@@ -17,7 +17,6 @@ const IconesTabela = styled.table`
 
     justify-content: space-evenly;
     padding: 10px 25px;
-    
 
     .editar img {
         margin-right: 10px;
@@ -28,6 +27,8 @@ const IconesTabela = styled.table`
 
         border: 0px;
         border-radius: 50px;
+
+        cursor: pointer;
 }
 `
 
