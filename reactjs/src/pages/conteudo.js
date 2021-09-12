@@ -174,7 +174,7 @@ export default function Conteudo() {
                                 </div>
 
                                 <div class="input-preco-por">
-                                    <div class="label">Preco POR:</div>
+                                    <div class="label">Preço POR:</div>
                                     <ProdutosInput type="text" value={precopor} onChange={e => setPrecopor(e.target.value)}/>
                                 </div>
                             </div>

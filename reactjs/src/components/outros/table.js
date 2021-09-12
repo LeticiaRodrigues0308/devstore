@@ -14,8 +14,6 @@ const TabelaProdutos = styled.table`
 const IconesTabela = styled.table`
     display: flex;
     flex-direction: row;
-
-    justify-content: space-evenly;
     padding: 10px 25px;
 
     .editar img {
@@ -27,7 +25,7 @@ const IconesTabela = styled.table`
 
         border: 0px;
         border-radius: 50px;
-
+        
         cursor: pointer;
 }
 `
