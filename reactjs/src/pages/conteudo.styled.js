@@ -212,7 +212,6 @@ textarea {
 
 td{
     padding: 20px 0px 20px 30px;
-
     font-size: 18px;
 }
 
@@ -224,26 +223,24 @@ th {
     background-color: #6CC3DF;
 }
 
-.icons {
-    display: flex;
-    flex-direction: row;
-
-    justify-content: space-evenly;
-}
-
-.icons button {
-    background-color: #565656;
-
-    border: 0px;
-    border-radius: 50px;
-}
-
 table tr:nth-child(odd){
     background-color: #F5F5F5;
 }
 
 table tr:nth-child(even) {
     background-color: #FFFFFF;
+}
+
+.acao > button {
+    visibility: hidden;
+}
+
+tr:hover {
+
+    .acao > button {
+    visibility: visible;
+}
+
 }
 `
 
