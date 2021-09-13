@@ -49,7 +49,7 @@ export default function Conteudo() {
             if(r.erro){
                 toast.error(r.erro);
             } else {
-                toast.success('Produto inserido com sucesso!');
+                toast.success('✔️ Produto inserido com sucesso!');
             }
         } else {
             let r = await api.alterarProduto(idAlterando, nome, categoria, precode, precopor, avaliacao, descricao, estoque, imagem);
@@ -57,7 +57,7 @@ export default function Conteudo() {
             if(r.erro){
                 toast.error(r.erro);
             } else {
-                toast.success('Produto alterado com sucesso!');
+                toast.success('✔️ Produto alterado com sucesso!');
             }
         }
 
