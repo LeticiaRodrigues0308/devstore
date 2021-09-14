@@ -156,7 +156,7 @@ textarea {
     outline: none;
     cursor: pointer;
 
-    width: 38.5em;
+    width: 39em;
     height: 15em;
 
     resize: none;
