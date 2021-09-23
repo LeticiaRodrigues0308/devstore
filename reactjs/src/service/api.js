@@ -1,6 +1,6 @@
 import axios from 'axios'
 const api = axios.create({
-    baseURL: 'https://github.com/LeticiaRodrigues0308/devstore.heroku.git'
+    baseURL: 'http://localhost:3030'
 })
 
 export default class Api {
