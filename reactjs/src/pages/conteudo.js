@@ -43,7 +43,7 @@ export default function Conteudo() {
         loading.current.complete();
 
 
-        if(idAlterando == 0) {
+        if(idAlterando === 0) {
             let r = await api.inserirProduto(nome, categoria, precode, precopor, avaliacao, descricao, estoque, imagem);
 
             if(r.erro){
@@ -151,7 +151,7 @@ export default function Conteudo() {
                     <div class="box-produto">
                         <div class="box-novo-produto">
                             <div class="linha"> <img src="./assets/linha-azul.png" alt=""/> </div>
-                            <div class="novo-produto"> {idAlterando == 0 ? "Novo Produto" : "Alterando Produto" + idAlterando}</div>
+                            <div class="novo-produto"> {idAlterando === 0 ? "Novo Produto" : "Alterando Produto" + idAlterando}</div>
                         </div>
 
                         <div class="cadastro-produto">
@@ -202,7 +202,7 @@ export default function Conteudo() {
                                     <textarea name="descricao" id="descricao" value={descricao} onChange={e => setDescricao(e.target.value)}></textarea>
                                 </div>
 
-                                <div class="botao-cadastrar"> <button onClick={inserirProduto}> {idAlterando == 0 ? "Cadastrar" : "Alterar"} </button> </div>
+                                <div class="botao-cadastrar"> <button onClick={inserirProduto}> {idAlterando === 0 ? "Cadastrar" : "Alterar"} </button> </div>
                             </div>
                         </div>
                     </div>
